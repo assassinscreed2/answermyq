@@ -9,7 +9,7 @@ export default function AnswerBlock({handleOpen,question}){
     async function postAnswer(){
         const tempQuestion = question
         tempQuestion.answer.push(answerRef.current.value);
-        const postData = await fetch(`http://localhost:3001/question/${question._id}`,{
+        const postData = await fetch(`https://answermeapi1.herokuapp.com/question/${question._id}`,{
             method: "PATCH",
             headers:{
                 'Content-Type':"application/json"

@@ -8,7 +8,7 @@ export default function QuestionBlock({question,getQuestion}){
     const router = useRouter()
 
     async function handleDelete(){
-      const deleteReq = await fetch(`http://localhost:3001/question/${question._id}`,{method:"DELETE"})
+      const deleteReq = await fetch(`https://answermeapi1.herokuapp.com/question/${question._id}`,{method:"DELETE"})
       const data = await deleteReq.json()
       getQuestion()
       console.log(data)

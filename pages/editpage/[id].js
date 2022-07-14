@@ -12,7 +12,7 @@ export default function EditPage(){
 
     useEffect(()=>{
         async function getQuestionById(){
-            const data =  await fetch(`http://localhost:3001/question/test/${router.query.id}`);
+            const data =  await fetch(`https://answermeapi1.herokuapp.com/question/test/${router.query.id}`);
             const question = await data.json()
             setQuestion(question)
             console.log("ab")

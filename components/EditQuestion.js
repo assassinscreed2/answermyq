@@ -28,7 +28,7 @@ export default function EditPageUtil({question}){
             answer:question.answer
         }
 
-        const data = await fetch(`http://localhost:3001/question/${question._id}`,{
+        const data = await fetch(`https://answermeapi1.herokuapp.com/question/${question._id}`,{
             method:'PATCH',
             headers: {
                 'Content-Type':'application/json'

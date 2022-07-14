@@ -15,7 +15,7 @@ export default function Question(){
     }
 
     async function getQuestions(){
-        const data = await fetch('http://localhost:3001/question/test');
+        const data = await fetch('https://answermeapi1.herokuapp.com/question/test');
         const fetchQuestions = await data.json();
         setQuestions(fetchQuestions)
     }

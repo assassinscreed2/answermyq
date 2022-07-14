@@ -40,7 +40,7 @@ export default function QuestionMainUtil(){
             answer:[]
         }
 
-        await fetch('http://localhost:3001/question',{
+        await fetch('https://answermeapi1.herokuapp.com/question',{
             method:'POST',
             headers: {
                 'Content-Type':'application/json'

@@ -31,7 +31,7 @@ export default function SignUp() {
       password:data.get('password')
     }
     
-    const fetchdata = await fetch('http://localhost:3001/user/signup',{
+    const fetchdata = await fetch('https://answermeapi1.herokuapp.com/user/signup',{
       method:"POST",
       headers:{
         'Content-Type':'application/json'
