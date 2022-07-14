@@ -37,7 +37,6 @@ export default function EditPageUtil({question}){
          }).then(()=>{
             router.push('/question')
          })
-        // console.log(data)
     }
 
     const ListItem = styled('li')(({ theme }) => ({
@@ -51,11 +50,9 @@ export default function EditPageUtil({question}){
     };
 
     const handleTags = () => {
-        console.log(inputRef.current.value)
         const text = inputRef.current.value
         if(chipData.length < 4){
             if(text != ""){
-                console.log(text)
                 if(text.length > 10){
                     text = text.substring(0,10)
                 }

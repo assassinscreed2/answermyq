@@ -4,14 +4,12 @@ import { useUser } from '@auth0/nextjs-auth0';
 
 export default function QuestionBlock({question,getQuestion}){
     const { user, error, isLoading } = useUser(); 
-    console.log(question)
     const router = useRouter()
 
     async function handleDelete(){
       const deleteReq = await fetch(`https://answermeapi1.herokuapp.com/question/${question._id}`,{method:"DELETE"})
       const data = await deleteReq.json()
       getQuestion()
-      console.log(data)
     }
 
     return <>

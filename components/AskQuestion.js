@@ -62,11 +62,9 @@ export default function QuestionMainUtil(){
     };
 
     const handleTags = () => {
-        console.log(inputRef.current.value)
         const text = inputRef.current.value
         if(chipData.length < 4){
             if(text != ""){
-                console.log(text)
                 if(text.length > 10){
                     text = text.substring(0,10)
                 }

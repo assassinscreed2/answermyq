@@ -18,7 +18,6 @@ export default function AnswerBlock({handleOpen,question}){
         })
 
         const updatedData = await postData.json();
-        console.log(updatedData)
     }
 
     return <>

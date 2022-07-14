@@ -7,12 +7,6 @@ export default function Question(){
 
     const [questions,setQuestions] = useState(null)
     const ans = [1,2,3,4]
-    
-    if(questions){
-        console.log(questions)
-    }else{
-        console.log("waiting")
-    }
 
     async function getQuestions(){
         const data = await fetch('https://answermeapi1.herokuapp.com/question/test');

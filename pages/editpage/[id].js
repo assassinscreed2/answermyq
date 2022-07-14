@@ -15,8 +15,6 @@ export default function EditPage(){
             const data =  await fetch(`https://answermeapi1.herokuapp.com/question/test/${router.query.id}`);
             const question = await data.json()
             setQuestion(question)
-            console.log("ab")
-            console.log(question)
         }
 
         router.query.id && getQuestionById()

@@ -44,11 +44,9 @@ export default function SignIn() {
       body:JSON.stringify(formdata)
     })
     const res = await postdata.json()
-    console.log("res",res)
     if(res.error){
       router.push('/signup')
     }else if(res.message === "Incorrect Password"){
-      console.log("Incorrect Password")
     }else{
       //router.push("/question")
     }

@@ -16,7 +16,6 @@ export default async function getQuestions(req,res){
       body:JSON.stringify(req.body)
     })
     const data = await postdata.json();
-    console.log(data)
     res.json(data)
   }
 }
