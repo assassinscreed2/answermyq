@@ -57,10 +57,11 @@ const tabs = (
         <Tabs style={{marginLeft:"auto"}}>
           <Tab classes={{root:classes.root}} label="Home" onClick={()=>router.push('/')}/>
           <Tab  style={{textTransform:"none",textDecoration:"none"}} label="Question"  onClick={()=>router.push('/question')} />
-          <Tab style={{textTransform:"none",textDecoration:"none"}} label="Ask Question"  onClick={()=>{user?router.push('/askquestion'):router.push('/signin')}}/>
+          <Tab style={{textTransform:"none",textDecoration:"none"}} label="Ask Question"  onClick={()=>{user?router.push('/askquestion'):router.push('/api/auth/login')}}/>
           <Tab style={{textTransform:"none",textDecoration:"none"}} label="LOGIN" href="/api/auth/login" component={Link}/>
           <Tab style={{textTransform:"none",textDecoration:"none"}} label="LOGOUT" href="/api/auth/logout" component={Link}/>
         </Tabs>
+        //sfsf
 )
 
 const menu = (<>
