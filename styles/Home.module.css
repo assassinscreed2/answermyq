@@ -1,0 +1,28 @@
+.background {
+  background-image : url("/background.jpg");
+  
+  background-position: "center";
+  background-size: "cover";
+  background-repeat:"no-repeat";
+  background-attachment:"fixed";
+  background-size: cover;
+}
+
+.questionBackground {
+  background-image : url("/question_background.jpg");
+  background-position: "center";
+  background-size: "cover";
+  background-repeat:"no-repeat";
+  background-attachment:"fixed";
+  background-size: cover;
+}
+
+.customBackground {
+  background-color: #00bf99;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+  background-position: "center";
+  background-size: "cover";
+  background-repeat:"no-repeat";
+  background-attachment:"fixed";
+  background-size: cover;
+}
