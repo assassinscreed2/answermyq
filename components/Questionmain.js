@@ -1,4 +1,4 @@
-import {Box, Button, Card, CardContent, Divider, Grid, Typography, List, ListItem, TextField, Dialog} from '@mui/material'
+import {Box, Button, Card, CardContent, Divider,useMediaQuery,useTheme ,Grid, Typography, List, ListItem, TextField, Dialog} from '@mui/material'
 import styles from '../styles/Home.module.css'
 import {useState} from 'react'
 import AnswerBlock from './Answerblock'
@@ -6,6 +6,9 @@ import { useUser } from '@auth0/nextjs-auth0';
 import {useRouter} from 'next/router'
 
 export default function QuestionMainUtil({question}){
+    const theme = useTheme()
+    const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
+    const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
     const { user, error, isLoading } = useUser(); 
     //ankur
     const text = " simply simply setting industry. Lorem Ipsum has been th is simply simply setting industry. Lorem Ipsum has been th is simply simply setting industry. Lorem Ipsum has been th is simply setting industry. Lorem Ipsum has been th is simply  Lorem Ipsum simply setting industry. Lorem Ipsum has been th is simply   simply setting industry. Lorem Ipsum has been th is simply setting industry. Lorem Ipsum has been the industry's standard dummy text ever since setting simply setting industry. Lorem Ipsum has been the industry's standard dummy text ever since setting industry. Lorem Ipsum has been the industry's standard dummy text ever since setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen bookthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen bookthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
@@ -18,14 +21,14 @@ export default function QuestionMainUtil({question}){
 
     return <Grid container className={styles.questionBackground} sx={{backgroundColor:"red",width:"100%",height:"100vh"}} justifyContent="center">
         <Grid item>
-            <Card sx={{bgcolor:"#B8FFF9",maxWidth:"60em",mt:"2em",boxShadow:"21"}}>
+            <Card sx={{bgcolor:"#B8FFF9",maxWidth:matchesSM?"28em":"60em",mt:"2em",boxShadow:"21"}}>
                 <CardContent sx={{pt:"0",pb:"0",boxShadow:"5"}}>
                 <Typography variant='h4' sx={{mt:"5px",mb:"8px",fontFamily:"Bree Serif"}}>
                     {question.title}
                 </Typography>
                 </CardContent>
                 <Divider />
-                <Grid container direction = "column" justifyContent="space-between" sx={{}}>
+                <Grid container direction = "column" justifyContent="space-between" >
                 {/* Question */}
                     <Grid item>
                         <CardContent sx={{minHeight:"5.5em"}}>

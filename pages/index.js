@@ -1,27 +1,28 @@
 //import welcomeImage from '/background.jpg'
-import { Button, Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import styles from '../styles/Home.module.css'
 import TypeAnimation from 'react-type-animation'
 import {useRouter} from 'next/router'
 
 export default function Home() {
-
+  const theme = useTheme()
   const router = useRouter();
-
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
   return (
     <>
-      <Grid container className={styles.background} sx={{height:"100vh"}} alignItems="flex-start" direction = "column">
-        <Grid item sx={{marginLeft:"12em",marginTop:"5em"}}>
-          <Typography variant='h1' sx={{fontWeight:"bold"}}>
-           WELCOME
+      <Grid container className={styles.background} sx={{height:"100vh"}} alignItems={matchesSM?"center":"flex-start"} direction = "column">
+        <Grid item sx={{marginLeft:matchesSM?"0em":"12em",marginTop:"5em",width:matchesSM?"100%":undefined}}>
+          <Typography variant={matchesSM?"h2":"h1"} align={matchesSM?"center":undefined} sx={{fontWeight:"bold"}}>
+            WELCOME
           </Typography>
-          <TypeAnimation 
+          <TypeAnimation
             sequence={['Common Platform to Solve your All Queries', 1000, 'ANSWER ME']}
-            wrapper="h1"
+            wrapper={matchesSM?"h3":"h1"}
             repeat={Infinity}
           />
         </Grid>
-        <Grid item sx={{marginLeft:"20em",marginTop:"10em"}}>
+        <Grid item sx={{marginLeft:matchesSM?"0":"20em",marginTop:"10em"}}>
           <Button variant="contained" onClick={()=>router.push('/question')}>
             <Typography variant='h3' >
               Explore
