@@ -12,7 +12,9 @@ export default function Question(){
     };
 
     async function getQuestions(){
+        console.log("data called");
         const data = await fetch(`/api/question`);
+        console.log("data is " +data);
         const fetchQuestions = await data.json();
         console.log("Fetched Question",fetchQuestions)
         setQuestions(fetchQuestions)
