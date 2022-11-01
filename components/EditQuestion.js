@@ -70,7 +70,7 @@ export default function EditPageUtil({question}){
             <Card sx={{bgcolor:"#B8FFF9",maxWidth:"60em",width:"57em",boxShadow:"21",marginTop:"1em"}}>
                 <CardContent sx={{pt:"0",pb:"0"}}>
                 <Typography variant='h4' sx={{mt:"5px",mb:"8px",fontFamily:"Bree Serif"}}>
-                    Enter Title
+                    Enter your Title
                 </Typography>
                 <TextField inputRef={titleRef} sx={{backgroundColor:"white"}} fullWidth defaultValue={question.title}/>
                 </CardContent>
