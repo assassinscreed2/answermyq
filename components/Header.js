@@ -80,7 +80,7 @@ const menu = (<>
       >
         <MenuItem classes={{root:classes.item}} onClick={() => {handleClose(); router.push('/')}} >Home</MenuItem>
         <MenuItem classes={{root:classes.item}} onClick={() => {handleClose(); router.push('/question')}} >Question</MenuItem>
-        <MenuItem classes={{root:classes.item}} onClick={() => {handleClose(); router.push('/askquestion')}} >Ask Question</MenuItem>
+        <MenuItem classes={{root:classes.item}} onClick={() => {handleClose(); user?router.push('/askquestion'):router.push('/api/auth/login')}} >Ask Question</MenuItem>
         <MenuItem onClick={handleClose} href="/api/auth/login" component={Link} classes={{root:classes.item}} >Login</MenuItem>
         <MenuItem onClick={handleClose} href="/api/auth/logout" component={Link} classes={{root:classes.item}} >Logout</MenuItem>
       </Menu>

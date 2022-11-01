@@ -14,6 +14,7 @@ export default function Question(){
     async function getQuestions(){
         const data = await fetch(`/api/question`);
         const fetchQuestions = await data.json();
+        console.log("Fetched Question",fetchQuestions)
         setQuestions(fetchQuestions)
         handleClose();
     }
