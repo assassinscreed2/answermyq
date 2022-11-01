@@ -23,7 +23,7 @@ export default function QuestionMainUtil({question}){
         <Grid item>
             <Card sx={{bgcolor:"#B8FFF9",maxWidth:matchesSM?"28em":"60em",mt:"2em",boxShadow:"21"}}>
                 <CardContent sx={{pt:"0",pb:"0",boxShadow:"5"}}>
-                <Typography variant='h4' sx={{mt:"5px",mb:"8px",fontFamily:"Bree Serif"}}>
+                <Typography variant='h4' sx={{pt:"5px",pb:"10px",fontFamily:"Bree Serif"}}>
                     {question.title}
                 </Typography>
                 </CardContent>
@@ -62,7 +62,7 @@ export default function QuestionMainUtil({question}){
                         </Button>:<Dialog fullWidth="true" open={open}><AnswerBlock question={question} handleOpen={handleOpen}/></Dialog>
                         }
                     </Grid>
-                    <Grid item sx={{maxWidth:"57em",width:"57em"}}>
+                    <Grid item sx={{width:"90%",minWidth:matchesMD?undefined:"57em"}}>
                         <Typography>
                             Answers
                             {/* sdf */}
@@ -73,7 +73,7 @@ export default function QuestionMainUtil({question}){
                                 overflow: 'scroll',
                                 maxHeight: 300,
                                 minHeight: "20em",
-                                marginTop:"1em"
+                                marginTop:"1em",
                                 }}>
                                 {
                                     question.answer.map((ans) => <ListItem>

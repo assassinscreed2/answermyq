@@ -7,14 +7,14 @@ export default function QuestionBlock({question,getQuestion}){
     const router = useRouter()
 
     async function handleDelete(){
-      const deleteReq = await fetch(`https://answermeapi1.herokuapp.com/question/${question._id}`,{method:"DELETE"})
+      const deleteReq = await fetch(`http://lopsided-insidious-aftershave.glitch.me/question/${question._id}`,{method:"DELETE"})
       const data = await deleteReq.json()
       getQuestion()
     }
 
     return <>
-    <Box sx={{maxWidth:"30em",boxShadow:"20",position:"static",borderRadius:"10%",ml:"0.6em",mt:"3em"}}>
-      <Card sx={{minHeight:"12em",maxHeight:"15em",bgcolor:"#DEEFE7",borderRadius:"5%"}}>
+    <Box sx={{maxWidth:"27em",minWidth:"17em",boxShadow:"20px",position:"static",borderRadius:"10%",ml:"0.6em",mt:"3em"}}>
+      <Card sx={{minHeight:"12em",maxHeight:"15em",bgcolor:"#DEEFE7",borderRadius:"5%",marginRight:"1em"}}>
         <CardContent sx={{pt:"0",pb:"0",boxShadow:"revert"}}>
           <Typography sx={{mt:"5px",mb:"8px",fontFamily:"Bree Serif"}}>
             {question.title}

@@ -29,7 +29,8 @@ const useStyles = makeStyles(theme => ({
         height:"50px"
     },
     menu:{
-        marginTop:"2em",
+        marginTop:"0em",
+        marginRight:"12%",
         backgroundColor:"#556cd6"
     },
     item:{
@@ -77,11 +78,11 @@ const menu = (<>
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem classes={{root:classes.item}} onClick={handleClose} >Home</MenuItem>
-        <MenuItem classes={{root:classes.item}} onClick={handleClose} >Question</MenuItem>
-        <MenuItem classes={{root:classes.item}} onClick={handleClose} >Ask Question</MenuItem>
-        <MenuItem onClick={handleClose} classes={{root:classes.item}} >Login</MenuItem>
-        <MenuItem onClick={handleClose} classes={{root:classes.item}} >Logout</MenuItem>
+        <MenuItem classes={{root:classes.item}} onClick={() => {handleClose(); router.push('/')}} >Home</MenuItem>
+        <MenuItem classes={{root:classes.item}} onClick={() => {handleClose(); router.push('/question')}} >Question</MenuItem>
+        <MenuItem classes={{root:classes.item}} onClick={() => {handleClose(); router.push('/askquestion')}} >Ask Question</MenuItem>
+        <MenuItem onClick={handleClose} href="/api/auth/login" component={Link} classes={{root:classes.item}} >Login</MenuItem>
+        <MenuItem onClick={handleClose} href="/api/auth/logout" component={Link} classes={{root:classes.item}} >Logout</MenuItem>
       </Menu>
     </>
 )

@@ -40,7 +40,7 @@ export default function QuestionMainUtil(){
             answer:[]
         }
 
-        await fetch('https://answermeapi1.herokuapp.com/question',{
+        await fetch('http://lopsided-insidious-aftershave.glitch.me/question',{
             method:'POST',
             headers: {
                 'Content-Type':'application/json'

@@ -12,7 +12,7 @@ export default function Question(){
     };
 
     async function getQuestions(){
-        const data = await fetch('https://answermeapi1.herokuapp.com/question/test');
+        const data = await fetch(`http://lopsided-insidious-aftershave.glitch.me/question/test`);
         const fetchQuestions = await data.json();
         setQuestions(fetchQuestions)
         handleClose();
@@ -28,6 +28,6 @@ export default function Question(){
                                 >
                                     <CircularProgress color="inherit" />
                                 </Backdrop>
-                {questions && questions.map((question,i)=>(<Grid item key={i} md={4}><QuestionBlock key={i} getQuestion = {getQuestions} question={question}/></Grid>))}
+                {questions && questions.map((question,i)=>(<Grid item key={i} md={4} ><QuestionBlock key={i} getQuestion = {getQuestions} question={question}/></Grid>))}
             </Grid>
 }

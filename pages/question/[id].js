@@ -11,7 +11,7 @@ export default function QuestionMain(){
 
     useEffect(()=>{
         async function getQuestionById(){
-            const data =  await fetch(`https://answermeapi1.herokuapp.com/question/test/${router.query.id}`);
+            const data =  await fetch(`http://lopsided-insidious-aftershave.glitch.me/question/test/${router.query.id}`);
             const question = await data.json()
             setQuestion(question)
         }
