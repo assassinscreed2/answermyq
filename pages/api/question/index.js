@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const portfolio = require('../../../db/model/portfolio')
 const Question = mongoose.model('Question');
 import connect from '../../../db'
 
