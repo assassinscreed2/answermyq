@@ -2,11 +2,8 @@ import { Grid ,Backdrop, CircularProgress} from "@mui/material";
 import QuestionBlock from "../../components/Questionblock";
 import styles from '../../styles/Home.module.css'
 import {useEffect,useState} from 'react'
-import { connect } from "../../db";
 
 export default function Question(){
-
-   
 
     const [questions,setQuestions] = useState(null)
     const [open, setOpen] = useState(true);
