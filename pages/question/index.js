@@ -12,14 +12,16 @@ export default function Question(){
     };
 
     async function getQuestions(){
-        const data = await fetch(`/api/question`);
-        console.log("data is " +data);
-        const text = await data.text();
-        console.log("text -> "+text);
-        const fetchQuestions = await data.json();
-        console.log("Fetched Question",fetchQuestions)
-        setQuestions(fetchQuestions)
-        handleClose();
+        await fetch('/api/question').then((res)=>{
+            console.log("res "+res);
+            return res.json();
+        }).then((res)=>{
+            console.log(res)
+            const fetchQuestions = res;
+            console.log("Fetched Question",fetchQuestions)
+            setQuestions(fetchQuestions)
+            handleClose();
+        }).catch(e=>console.log(e))
     }
 
     useEffect(()=>{
