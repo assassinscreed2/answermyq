@@ -91,6 +91,7 @@ const menu = (<>
     <AppBar position="static" sx={{bgcolor:"#BDF2D5"}}>
     {/* fd */}
         <Toolbar>
+            <Button>click me</Button>
             <Box sx={{padding:"3px"}}>
                 <Image src="/logo.png" width={70} height={55}/>
             </Box>

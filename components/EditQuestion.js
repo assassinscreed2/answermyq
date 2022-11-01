@@ -5,6 +5,7 @@ import AnswerBlock from './Answerblock'
 import Chip from '@mui/material/Chip';
 import TagFacesIcon from '@mui/icons-material/TagFaces';
 import { styled } from '@mui/material/styles';
+import {useRouter} from 'next/router'
 
 export default function EditPageUtil({question}){
 
@@ -14,6 +15,7 @@ export default function EditPageUtil({question}){
     const titleRef = useRef()
     const questionRef = useRef()
     const inputRef = useRef()
+    const router = useRouter()
 
     const handleOpen = () => {
         setOpen(!open)
@@ -28,7 +30,7 @@ export default function EditPageUtil({question}){
             answer:question.answer
         }
 
-        const data = await fetch(`http://lopsided-insidious-aftershave.glitch.me/question/${question._id}`,{
+        const data = await fetch(`/api/question/${question._id}`,{
             method:'PATCH',
             headers: {
                 'Content-Type':'application/json'

@@ -35,7 +35,7 @@ export default function SignIn() {
       email:data.get('email'),
       password:data.get('password')
     }
-    const postdata = await fetch('http://lopsided-insidious-aftershave.glitch.me/user/login',{
+    const postdata = await fetch('/api/user/login',{
       method:'POST',
       credentials: "include",
       headers:{

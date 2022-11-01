@@ -40,7 +40,7 @@ export default function QuestionMainUtil(){
             answer:[]
         }
 
-        await fetch('http://lopsided-insidious-aftershave.glitch.me/question',{
+        await fetch('/api/question',{
             method:'POST',
             headers: {
                 'Content-Type':'application/json'

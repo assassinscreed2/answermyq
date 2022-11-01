@@ -7,7 +7,7 @@ export default function QuestionBlock({question,getQuestion}){
     const router = useRouter()
 
     async function handleDelete(){
-      const deleteReq = await fetch(`http://lopsided-insidious-aftershave.glitch.me/question/${question._id}`,{method:"DELETE"})
+      const deleteReq = await fetch(`/api/question/${question._id}`,{method:"DELETE"})
       const data = await deleteReq.json()
       getQuestion()
     }

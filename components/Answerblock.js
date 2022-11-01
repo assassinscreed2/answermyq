@@ -9,7 +9,7 @@ export default function AnswerBlock({handleOpen,question}){
     async function postAnswer(){
         const tempQuestion = question
         tempQuestion.answer.push(answerRef.current.value);
-        const postData = await fetch(`http://lopsided-insidious-aftershave.glitch.me/question/${question._id}`,{
+        const postData = await fetch(`/api/question/${question._id}`,{
             method: "PATCH",
             headers:{
                 'Content-Type':"application/json"

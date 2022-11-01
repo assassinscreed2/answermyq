@@ -2,8 +2,11 @@ import { Grid ,Backdrop, CircularProgress} from "@mui/material";
 import QuestionBlock from "../../components/Questionblock";
 import styles from '../../styles/Home.module.css'
 import {useEffect,useState} from 'react'
+import { connect } from "../../db";
 
 export default function Question(){
+
+   
 
     const [questions,setQuestions] = useState(null)
     const [open, setOpen] = useState(true);
@@ -12,7 +15,7 @@ export default function Question(){
     };
 
     async function getQuestions(){
-        const data = await fetch(`http://lopsided-insidious-aftershave.glitch.me/question/test`);
+        const data = await fetch(`/api/question`);
         const fetchQuestions = await data.json();
         setQuestions(fetchQuestions)
         handleClose();
