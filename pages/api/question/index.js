@@ -13,6 +13,7 @@ export default async function getQuestions(req,res){
         console.log("inside GET")
         await Question.find().then(
             (response)=>{
+                console.log("inside Question "+response)
                 return res.json(response)
             }
         ).catch((e)=>{
