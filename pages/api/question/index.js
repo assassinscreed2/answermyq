@@ -10,12 +10,9 @@ export default async function getQuestions(req,res){
     })
 
     if(req.method === 'GET'){
-        console.log("inside GET")
         await Question.find().then(
             (response)=>{
-                console.log("inside Question receaved "+response)
                 return res.json(response)
-                console.log("data not send");
             }
         ).catch((e)=>{
             return res.json({error:e})
