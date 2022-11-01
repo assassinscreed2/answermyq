@@ -85,7 +85,6 @@ export default function QuestionMainUtil({question}){
                         </List>
                     </Grid>
                 </Grid>
-                
                 {/* buttons */}
                 <Grid container direction = "row" sx={{mt:"1em"}} justifyContent="flex-end">
                     <Grid item sx={{mr:"2em"}}>
