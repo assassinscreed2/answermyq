@@ -13,7 +13,7 @@ export default function Question(){
 
     async function getQuestions(){
         await fetch('/api/question').then((res)=>{
-            console.log("res "+res);
+            console.log(res);
             return res.json();
         }).then((res)=>{
             console.log(res)
