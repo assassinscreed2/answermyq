@@ -9,5 +9,5 @@ const questionSchema = new Schema({
   tags: [Object]
 })
 
-const question = mongoose.model('Question');
+const question = mongoose.models.Question || mongoose.model('Question',questionSchema);
 module.exports = question
