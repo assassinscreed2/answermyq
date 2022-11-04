@@ -92,7 +92,7 @@ const menu = (<>
     {/* fd */}
         <Toolbar>
             <Box sx={{padding:"3px"}}>
-                <Image src="/logo.png" width={70} height={55}/>
+                <Image src="/answermyq/logo.png" width={70} height={55}/>
             </Box>
             {matchesSM?menu:tabs}
         </Toolbar>

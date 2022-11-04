@@ -1,4 +1,4 @@
-//import welcomeImage from '/background.jpg'
+
 import { Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import styles from '../styles/Home.module.css'
 import TypeAnimation from 'react-type-animation'
