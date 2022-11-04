@@ -1,5 +1,5 @@
 .background {
-  background-image : url("/answermyq/background.jpg");
+  background-image : url("/background.jpg");
   background-position: "center";
   background-size: "cover";
   background-repeat:"no-repeat";
@@ -8,7 +8,7 @@
 }
 
 .questionBackground {
-  background-image : url("/answermyq/question_background.jpg");
+  background-image : url("/question_background.jpg");
   background-position: "center";
   background-size: "cover";
   background-repeat:"no-repeat";
