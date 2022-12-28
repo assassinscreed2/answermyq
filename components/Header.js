@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {Button,AppBar,Toolbar,Tabs,Tab,useMediaQuery,Menu,MenuItem,Box} from '@mui/material'
-import {ThemeProvider, useTheme} from '@mui/material/styles'
+import {useTheme} from '@mui/material/styles'
 import { makeStyles } from '@mui/styles'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import Image from 'next/image';

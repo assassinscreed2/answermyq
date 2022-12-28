@@ -1,25 +1,17 @@
-import {Box, Button, Card, CardContent, Divider, Grid, Typography, TextField,Paper , Dialog} from '@mui/material'
+import {Button, Card, CardContent, Divider, Grid, Typography, TextField} from '@mui/material'
 import styles from '../styles/Home.module.css'
 import {useState, useRef} from 'react'
-import AnswerBlock from './Answerblock'
 import Chip from '@mui/material/Chip';
-import TagFacesIcon from '@mui/icons-material/TagFaces';
 import { styled } from '@mui/material/styles';
 import {useRouter} from 'next/router'
 
 export default function EditPageUtil({question}){
 
-    const text = " simply simply setting industry. Lorem Ipsum has been th is simply simply setting industry. Lorem Ipsum has been th is simply simply setting industry. Lorem Ipsum has been th is simply setting industry. Lorem Ipsum has been th is simply  Lorem Ipsum simply setting industry. Lorem Ipsum has been th is simply   simply setting industry. Lorem Ipsum has been th is simply setting industry. Lorem Ipsum has been the industry's standard dummy text ever since setting simply setting industry. Lorem Ipsum has been the industry's standard dummy text ever since setting industry. Lorem Ipsum has been the industry's standard dummy text ever since setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen bookthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen bookthe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
-    const [open,setOpen] = useState(false)
     const [chipData, setChipData] = useState(question.tags);
     const titleRef = useRef()
     const questionRef = useRef()
     const inputRef = useRef()
     const router = useRouter()
-
-    const handleOpen = () => {
-        setOpen(!open)
-    }
 
     async function handleQuestion(){
 

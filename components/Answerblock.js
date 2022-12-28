@@ -1,10 +1,8 @@
-import { Button, Card, CardActions, CardContent, Grid, TextField, Typography } from "@mui/material";
+import { Button, Card, CardContent, Grid, TextField, Typography } from "@mui/material";
 import {useRef} from 'react'
-import { useUser } from '@auth0/nextjs-auth0';
 
 export default function AnswerBlock({handleOpen,question}){
-    const answerRef = useRef()
-    const { user, error, isLoading } = useUser(); 
+    const answerRef = useRef() 
 
     async function postAnswer(){
         const tempQuestion = question
